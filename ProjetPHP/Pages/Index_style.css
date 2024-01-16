@@ -1,0 +1,1825 @@
+/**************************************************** Général *************************************************************/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Century Gothic';
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  height: 101%; width: 101%;
+  background: url('https://cdn.discordapp.com/attachments/1020008766479020033/1108399307159240855/DLEDMV-Koenigsegg-Agera-R-ADV.1-04.jpg');
+  background-size: cover;
+  z-index: -100000; 
+  -webkit-filter: blur(8px);
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Century Gothic';
+  font-size: 275%;
+}
+h2{
+  color: black;
+  z-index: 2;
+  top: -65px;
+  margin-bottom: 0%;
+  width: min-content;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  font-size: 250%;
+  font-family: 'Century Gothic';
+}
+
+#label{
+  display: block;
+  color:black;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.goto {
+  user-select: none;
+  top: -75px;
+  float:right;
+  z-index: 9;
+  background-color: white;
+  position: relative;
+  color: black;
+  font-size: 150%;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 15px; 
+  width: max-content;
+}
+
+#deconnexion_admin {
+  top: -65px;
+}
+
+.goto:hover {
+  cursor: pointer;
+  background-color: rgb(177, 177, 177);
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  /* Ajoutez les styles supplémentaires ici */
+}
+
+/* Styles pour les boutons radio */
+.type-insc input[type="radio"] {
+  display: none; /* Masque les boutons radio par défaut */
+}
+
+/* Styles pour les éléments parents des boutons radio sélectionnés */
+.type-insc.selected {
+  background-color: #333; /* Change la couleur de fond de l'élément parent pour les boutons radio sélectionnés */
+  color: #fff; /* Change la couleur du texte de l'élément parent pour les boutons radio sélectionnés */
+}
+
+p {
+  margin: 0;
+  font-family: 'Century Gothic';
+}
+/******************************************* formulaire *****************************************************/
+
+.form{
+  margin-top: -60px;
+  text-align: center;
+}
+/*************************************** Bande stick ********************************************************/
+
+.bande-stick {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  z-index: 0;
+  top: -6px;
+}
+
+#imglogo {
+  width: 100%;
+  height: auto;
+}
+
+#imglogo_container {
+  width: 230px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+/**************************************** Menu hamburger ****************************************************/
+#open_menu_hamburger {
+  position: absolute;
+  left: 11px;
+  top: 15px;
+  z-index: 2;
+}
+.menu_hamburger li {
+  margin-top: 9%;
+}
+
+.menu_hamburger {
+  margin: 0;
+  height: 100%;
+  width: 370px;
+  left: -370px;
+  position: fixed;
+  z-index: 10000;
+  background-color: black;
+  transition: left 0.5s ease;
+  padding-top: 40px;
+  top: -6px;
+  text-align: center;
+}
+
+.menu_hamburger.active {
+  left: 0;
+}
+
+.menu_hamburger.close_button {
+  position: absolute;
+  top: 0;
+  right: 36px;
+}
+
+#imgbtnclsmh{
+  top: -5px;
+  left: -130px;
+  position: relative;
+  width: 13%;
+  height: auto;
+}
+
+.open_menu_hamburger_btn {
+  position: relative;
+  left: 5px;
+  top: 0px;
+  display: block;
+  width: 35px;
+}
+.open_menu_hamburger_btn span{
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin: 6px;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+}
+
+.menu_hamburger a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Century Gothic';
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu_hamburger a:hover {
+  color: #818181;
+}
+
+.menu_hamburger ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/*IMAGE MENU HAMBURGER*/
+
+#imggarage{
+  width: 13%;
+  height: auto;
+  position: relative;
+}
+
+#imglocation{
+  width: 13%;
+  height: auto;
+
+}
+
+#imgvoiture{
+  width: 13%;
+  height: auto;
+}
+
+#imgaproposdenous{
+  width: 13%;
+  height: auto;
+}
+
+#imgtelephone{
+  width: 13%;
+  height: auto;
+}
+
+/*************************************** Inscription **********************************************************/
+
+/* pop up inscription */
+ 
+.inscription-popup {
+  display: none;
+}
+.inscription-back {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba( 0, 0, 0, .40 );
+  z-index: 10;
+}
+.inscription-container {
+  user-select: none;
+  display: block;
+  border-radius: 10px;
+  border: rgb(35, 35, 35) solid 3px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 25px;
+  background: white;
+  transform: translate(-50%, -50%);
+  text-decoration: black;
+}
+
+#pas_un_compte{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 50PX;
+  font-size: 100%;
+  font-family: 'Century Gothic';
+}
+
+#sinscrire{
+  width: 50%;
+  height: 50%;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 150%;
+  position: relative;
+  top: -8px;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+}
+
+#sinscrire:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+.wrong_email {
+  margin: 0;
+  color: red;
+  display: none;
+}
+
+.wrong_email.activate_wrong_email {
+  display: block;
+}
+
+.input-field{
+  color: black;
+  font-family: 'Century Gothic';
+}
+
+/************************************************** connexion ***********************************************/
+
+/* pop up connexion */ 
+
+.connexion_popup {
+    display: none;
+  }
+.connexion-back {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba( 0, 0, 0, .35 );
+    z-index: 10;
+  }
+.connexion-container {
+  user-select: none;
+    display: none;
+    position: fixed;
+    top: 50%;   
+    left: 50%;
+    padding: 25px;
+    background: white;
+    transform: translate(-50%, -50%);
+    border: rgb(35, 35, 35) solid 3px;
+    border-radius: 10px;
+  }
+
+#deja_un_compte{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 50PX;
+  font-size: 100%;
+  font-family: 'Century Gothic';
+}
+
+#seconnecter{
+  width: 50%;
+  height: 50%;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 150%;
+  position: relative;
+  top: -8px;
+  border-radius: 6px;
+}
+
+#seconnecter:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/********************************************menu type client****************************************************/
+
+#menu-accordeon {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 180px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+#menu-accordeon ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+
+#menu-accordeon li {
+  background-color:rgb(29, 188, 212); 
+  background-image:rgb(29, 188, 212);
+  background-image: rgb(29, 188, 212);
+  border-radius: 6px;
+  margin-bottom:2px;
+  border:solid 2px rgb(0, 107, 195);
+}
+
+#menu-accordeon li li {
+  max-height:0;
+  overflow: hidden;
+  transition: all .5s;
+  border-radius:0;
+  background: white;
+  box-shadow: none;
+  border:none;
+  margin:0
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: black;
+  padding: 8px 0;
+  font-family: verdana;
+  font-size:1.2em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+  background: rgb(0, 107, 195);
+}
+#menu-accordeon li:checked {
+  background: rgb(0, 107, 195);
+}
+#menu-accordeon li li:hover {
+  background: rgb(0, 107, 195);
+}
+#menu-accordeon ul li:last-child {
+  border-radius: 0 0 6px 6px;
+  border:none;
+}
+#menu-accordeon li:hover li {
+  max-height: 15em;
+}
+
+.type-insc {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+/********************************** input syle decoration ***************************************************/
+
+.input-field{
+  position: relative;
+  margin-top: 15px;
+}
+
+.input-field input{
+  width: 350px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid white;
+  background: transparent;
+  color: black;
+  outline: none;
+}
+
+.input-field label{
+  position: absolute;
+  top: 50%;
+  left: 52px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus{
+  border: 2px solid white;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+  top: 0;
+  left: 48px;
+  font-size: 16px;
+  padding: 0 2px;
+  background: white;
+}
+
+.test_id {
+  position: relative;
+  z-index: 99;
+  font-size: 440%;
+  margin: 0;
+}
+
+/************************** input (obligé de mettre des id) ********************************/
+
+#nom-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#firstname-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#address-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#mail-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#mdp-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#confirm-mdp-insc{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#mail-conn{
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+#mdp-conn {
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%, -50% );
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+}
+
+/**************************************************** Location container *******************************************/
+
+.container_option_location {
+  top: 50px ;
+  padding: 25px 0;
+  text-align: center;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 20px;
+  width: 55%;
+  height: auto;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+}
+
+.gauche_droite {
+  display: flex;
+}
+
+.droite {
+  width: 50%;
+}
+
+.gauche {
+  width: 50%;
+}
+
+.container_option_location p {
+  color:black;
+  margin-top: 45px;
+  font-size: 150%;
+  margin-bottom: 15px;
+  font-family: 'Century Gothic';
+}
+
+#date_depart.content_location_time input{
+  border: 3px solid rgb(0, 107, 195);
+  position: relative;
+  width:130px;
+  height:31px;
+  font-family: 'Century Gothic';
+}
+
+#date_arrivee.content_location_time input{
+  border: 3px solid rgb(0, 107, 195);
+  position: relative;
+  width:130px;
+  height:31px;
+  font-family: 'Century Gothic';
+}
+
+#lieu_depart.content_location select {
+  border: 3px solid rgb(0, 107, 195);
+  position: relative;
+  width: auto;
+  height:35px;
+  font-family: 'Century Gothic';
+}
+
+#lieu_arrivee.content_location select {
+  border: 3px solid rgb(0, 107, 195);
+  position: relative;
+  width: auto;
+  height:35px;
+  font-family: 'Century Gothic';
+}
+
+#vehicule_opt_location{
+  margin-top: 115px;
+  margin-bottom: 10px;
+  border: 3px solid rgb(0, 107, 195);
+  color: black;
+  position: relative;
+  width: auto;
+  height: 50px;
+  font-size: 120%;
+  font-family: 'Century Gothic';
+  cursor: pointer;
+}
+
+#vehicule_opt_location:hover{
+  background-color: rgb(29, 188, 212);
+}
+/*********************************************** Liste voiture ****************************************/
+
+.content_liste_triee {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(0, 107, 195);
+  font-weight: bold;
+  margin-bottom: -13px;
+}
+
+.voiture_triee {
+  position: relative;
+  border: black 2px solid;
+  border-radius: 5px;
+  margin: 5px;
+  width: calc(100%/4 - 14px);
+  background-color: white;
+  height: 250px;
+  cursor: pointer;
+}
+
+.liste_voiture_triee {
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.liste_voiture_triee img {
+  width: 80%;
+  height: auto;
+  max-width: 80%;
+  max-height: 60%;
+}
+
+/*********************************** paiement_pop_up *********************************/
+
+.paiement_popup {
+  display: none;
+}
+
+.paiement_back {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba( 0, 0, 0, .35 );
+  z-index: 10;
+}
+
+.paiement_container {
+  user-select: none;
+  display: none;
+  position: fixed;
+  top: 50%;   
+  left: 50%;
+  padding: 25px;
+  background: white;
+  transform: translate(-50%, -50%);
+  border: rgb(35, 35, 35) solid 3px;
+  border-radius: 10px;
+}
+
+.content_paiement {
+  display: none;
+}
+
+/************************** nous contacter *****************************/
+
+.container_contact {
+    top: 50px;
+    padding: 25px 0;
+    text-align: center;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 40px;
+    width: 65%;
+    height: 75%;
+    border-radius: 1%;
+    font-family: 'Century Gothic';
+}
+
+/***************************** 1ere ligne *******************************/
+
+#notreaddr{
+  font-size: 250%;
+  font-family: 'Century Gothic';
+  color: rgb(0, 107, 195);
+  margin-top: 2%;
+  left: 50%;
+}
+
+#mail{
+  position: absolute;
+  left: 20%;
+  top: 21%;
+  width: 6%;
+}
+
+#addrmail {
+  position: relative;
+  left: 5%;
+  font-family: 'Century Gothic';
+  font-size: 200%;
+  text-decoration: none;
+  color: black;
+  top: 5%;
+}
+
+/****************************** 2eme ligne *****************************/
+
+#telephone{
+  font-size: 250%;
+  font-family: 'Century Gothic';
+  color: rgb(0, 107, 195);
+  margin-top: -4%;
+  left: 50%;
+}
+
+#numtel{
+  font-size: 400%;
+  font-family: 'Century Gothic';
+  color: black;
+  left: 50%;
+  margin-top: 20px;
+}
+
+/*************************** 3eme ligne *******************************/
+
+#nosreseaux {
+  color: rgb(0, 107, 195);
+  font-family: 'Century Gothic';
+  font-size: 250%;
+  margin-top: 4%;
+  z-index: 200;
+  left: 50%;
+}
+
+/** Image réseaux **/
+
+#insta{
+  position: absolute;
+  left: 15%;
+  top: 500px;
+  width: 7%;
+  height: auto;
+}
+
+#twitter{
+  position: absolute;
+  left: 30%;
+  top: 510px;
+  width: 7%;
+  height: auto;
+}
+
+#facebook{
+  position: absolute;
+  top: 500px;
+  width: 7%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#ytb{
+  position: absolute;
+  left: 65%;
+  top: 516px;
+  width: 7%;
+  height: auto;
+}
+
+#tiktok{
+  position: absolute;
+  left: 80%;
+  top: 500px;
+  width: 7%;
+  height: auto;
+}
+
+/************************* A propos de nous ************************/
+
+.container_APDN {
+  top: 60px;
+  padding: 25px 0;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 25px;
+  width: 80%;
+  height: 81%;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+  text-align: center;
+}
+
+/*** titre ***/
+
+.container_APDN a {
+  text-decoration: none;
+  color: rgb(0, 107, 195);
+  font-size: 150%;
+  font-family: 'Century Gothic';
+  position: relative;
+  top: -25px;
+}
+
+/*** texte ***/
+
+.container_APDN p {
+  font-size: 120%;
+  margin-left: 50px;
+  margin-right: 50px;
+  position: relative;
+  top: -20px;
+}
+
+/***************************** plus d'infos ***************************/
+
+
+.plusdinfo_container {
+  top: 30px;
+  padding: 25px 0;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 80px;
+  width: 70%;
+  height: 35%;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+}
+
+.plusdinfo_container p{
+  color: rgb(0, 107, 195);
+  font-family: 'Century Gothic';
+  font-weight: bold;
+}
+
+.plusdinfo_container h1 {
+  color: black;
+  position: absolute;
+  left: 50%;
+  font-size: 150%;
+  font-family: 'Century Gothic';
+}
+
+#marque{
+  position: absolute;
+  left: 10%;
+  top: 100px;
+}
+
+#modele{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+
+#categorie{
+  position: absolute;
+  top: 100px;
+  right: 6%;
+}
+
+#compteur{
+  position: absolute;
+  margin-left: 7%;
+  top: 175px;
+}
+
+#immatriculation{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 177px;
+}
+
+#etat{
+  position: absolute;
+  top: 177px;
+  right: 13%;
+}
+
+#nomdegats {
+  position: relative;
+  text-align: center;
+  margin-left: 70%;
+  margin-top: 8%;
+}
+
+#ville{
+  position: absolute;
+  left: 9%;
+  top: 254px;
+}
+
+#prenomnom{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 254px;
+}
+
+/*********** acceder au paiement **************/
+
+#paiement_button{
+  width: 200px;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 120%;
+  position: relative;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 500px;
+}
+
+#paiement_button:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+.labeloptions{
+  top: 280px;
+  padding: 25px 0;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 25px;
+  width: 70%;
+  height: auto;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+}
+
+.labeloptions p {
+  color: black;
+  font-size: 135%;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.labeloptions label{
+  text-align: left;
+  margin-left: 10%;
+  font-size: 110%;
+}
+
+/******** bouton effectuer le paiment ***************/
+
+#button_insert_location{
+  width: 150px;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 120%;
+  position: relative;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+#button_insert_location:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/***************************** bouton deco/louer **********************/
+
+/*** général ***/
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 50;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+  float:left;
+  width: 200px;
+  height: 40px;
+  background-color: rgba(0,0,0, .50);
+  line-height: 40px;
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+
+nav ul li a:hover {
+  background-color: rgba(255,255,255, .50);
+}
+
+/*** mise en forme du menu deroulant **/
+
+nav ul li ul li {
+  display: none;
+  margin-top: 3px;
+}
+
+nav ul li:hover ul li {
+ display: block;
+}
+
+/*** positionnement bouton se deconnecter et mes locations ***/
+
+nav ul li ul{
+  margin-top: 17px;
+  right: -20px;
+}
+
+/*** style des bouton ***/
+
+/*** bouton se deconnecter ***/
+
+#deconnexion {
+  background-color: black;
+  width: 200px;
+  height: 43px;
+  color: white;
+  font-family: 'Century Gothic';
+  border-width: 1px;
+  border-color:rgba(255,255,255, .50);
+}
+
+#deconnexion:hover{
+  background-color: rgba(255,255,255, .20);
+}
+
+/*** bouton mes locations ***/
+
+#btn_liste_location {
+  background-color: black;
+  width: 200px;
+  height: 43px;
+  color: white;
+  font-family: 'Century Gothic';
+  border-width: 1px;
+  border-color:rgba(255,255,255, .50);
+}
+
+#btn_liste_location:hover{
+  background-color: rgba(255,255,255, .20);
+}
+/*********************** mes locations **************************/
+
+.meslocations{
+  padding: 35px 0;
+  color: rgb(0, 107, 195);
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 10px;
+  width: 67%;
+  height: auto;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+  text-align: center;
+  line-height: 180%;
+  font-weight: bold;
+}
+
+/**************************** carte *****************************/
+
+#imgfrance{
+  position: fixed;
+  width: 43%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  border-radius: 1%;
+}
+/************************* faire louer ***************************/
+
+/****** div globale ******/
+
+.elite{
+  top: 50px;
+  left: 30px;
+  padding: 0px 0;
+  background-color: rgb(255,255,255),0;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border-radius: 0;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.elite h4{
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200%;
+  font-family: 'Century Gothic';
+  top: 5px;
+}
+
+/**** 1ere div ****/
+
+.catmarmo{
+  top: 30px;
+  left: 30px;
+  padding: 40px 0;
+  background-color: white;
+  position: absolute;
+  text-align: center;
+  margin-top: 80px;
+  width: 47%;
+  height: 61%;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+}
+
+#insertion_categorie{
+  color: black;
+  position: relative;
+  font-size: 120%;
+  margin-bottom: 10%;
+  margin-top: 20px;
+  border: 2px solid rgb(0, 107, 195);
+  border-radius: 5%;
+}
+
+#insertion_marque{
+  color: black;
+  position: relative;
+  font-size: 120%;
+  margin-bottom: 10%;
+  border: 2px solid rgb(0, 107, 195);
+  border-radius: 5%;
+}
+
+#insertion_modele{
+  color: black;
+  position: relative;
+  font-size: 120%;
+  margin-bottom: 10%;
+  border: 2px solid rgb(0, 107, 195);
+  border-radius: 5%;
+}
+
+#insertion_etat{
+  color: black;
+  position: relative;
+  font-size: 120%;
+  border: 2px solid rgb(0, 107, 195);
+  border-radius: 5%;
+  margin-bottom: 5%;
+}
+
+/****** 2eme div *****/
+
+.PICL {
+  top: 30px;
+  right: 30px;
+  padding: 26px 0;
+  background-color: white;
+  position: absolute;
+  margin-top: 80px;
+  width: 47%;
+  height: 66%;
+  border-radius: 1%;
+  font-family: 'Century Gothic'; 
+  text-align: center;
+}
+
+.PICL P {
+  color: rgb(0, 107, 195);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 130%;
+}
+
+.PICL input{
+  margin-bottom: 5%;
+}
+
+#input_immatriculation{
+  width: 350px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid black ;
+  background: transparent;
+  color: black;
+  outline: none;
+}
+
+#input_compteur{
+  width: 350px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid black ;
+  background: transparent;
+  color: black;
+  outline: none;
+}
+
+#input_photo{
+  width: 350px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 15px;
+  background: transparent;
+  color: black;
+  outline: none;
+  margin-top: 5px;
+}
+
+#insertion_lieu{
+  position: relative;
+  text-align: center;
+  width: auto;
+  height: auto;
+  color: black;
+  font-size: 120%;
+  border: 2px solid rgb(0, 107, 195);
+  border-radius: 5%;
+  margin-bottom: 40px;
+}
+
+/***** btn ajouter véhicules ******/
+
+#btn_ajout_voiture{
+  width: 200px;
+  height: 50px;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 135%;
+  position: absolute;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+#btn_ajout_voiture:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/***************************************************** Administration *****************************************/
+
+table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+table,
+td {
+    border: 1px solid #333;
+}
+td,
+th {
+  padding: 5px 15px;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+h5{
+  color: black;
+  font-size: 350%;
+  font-weight: bold;
+  font-family: 'Century Gothic';
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table tbody tr td img {
+  max-width: 100px;
+  height: auto;
+}
+/***************** AFFICHAGE *****************/
+
+.affichage{
+  top: 100px;
+  left: 30px;
+  padding: 0px 0;
+  background-color: rgb(255,255,255);
+  position: absolute;
+  width: 90%;
+  height: 38%;
+  border-radius: 0;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1%;
+}
+
+.hist_client{
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  width: 33%;
+}
+
+.btninfosclient input{
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 100%;
+  position: relative;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  z-index: 2;
+  margin-top: 65px;
+}
+
+#selection_client{
+  background-color: white;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.btninfosclient input:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+.list_vehicule{
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  width: 33%;
+  }
+
+.list_vehicule label{
+  color: black;
+  position: relative;
+  border: black solid 1px;
+  border-radius: 5px;
+  display: block;
+  width: max-content;
+  padding: 0px 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.list_vehicule label:hover{
+  background-color: rgb(29, 188, 212);
+  cursor: pointer;
+}
+
+.list_vehicule label.selected {
+  background-color: rgb(0, 107, 195);
+  color: #fff; 
+}
+
+input[type="radio"]{
+  display: none;
+  background-color: rgb(29, 188, 212);
+}
+
+.btnconsultervehicules input{
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 100%;
+  position: relative;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  margin-top: 5px;
+}
+
+.btnconsultervehicules input:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+.location{
+  text-align: center;
+  position: relative;
+  right: 0;
+  z-index: 10;
+  display: inline-block;
+  width: 33%;
+}
+
+.location label{
+  color: black;
+  position: relative;
+  border: black solid 1px;
+  border-radius: 5px;
+  display: block;
+  width: max-content;
+  padding: 0px 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -3px;
+}
+
+.location label:hover{
+  background-color: rgb(29, 188, 212);
+  cursor: pointer;
+}
+
+.location label.selected {
+  background-color: rgb(0, 107, 195);
+  color: #fff; 
+}
+
+.consulterloc input{
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 100%;
+  position: relative;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+}
+
+.consulterloc input:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/******************************* SUPPRESSION ****************************/
+
+.suppression{
+  top: 400px;
+  left: 30px;
+  padding: 0px 0;
+  background-color: rgb(255,255,255);
+  position: absolute;
+  width: 90%;
+  height: 38%;
+  border-radius: 0;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1%;
+}
+
+.suppr_client {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  text-align: center;
+}
+
+.suppr_vehicule{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.suppr_location{
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  text-align: center;
+}
+
+.suppression select{
+  margin-bottom: 30px;
+}
+
+.suppression input{
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 100%;
+  position: absolute;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55px;
+}
+
+.suppression input:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/***************************** Insertion ****************************/
+
+.insertion{
+  top: 700px;
+  left: 30px;
+  padding: 0px 0;
+  background-color: rgb(255,255,255);
+  position: absolute;
+  width: 90%;
+  height: 38%;
+  border-radius: 0;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1%;
+}
+
+.insertion button{
+  width: 17%;
+  height: 15%;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 120%;
+  position: absolute;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  display: inline-block;
+}
+
+.insertion button:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+#btnNV{
+  top: 150px;
+  margin-left: 150px;
+  left: 0%;
+}
+
+#btnNC{
+  left: 50%;
+  transform: translateX(-50%);
+  top: 150px;
+}
+
+#btnNL{
+  top: 150px;
+  margin-right: 150px;
+  right: 0%;  
+}
+
+/** Nouveau Client **/
+
+
+#titreNC{
+  position: absolute;
+  color: white;
+  text-align: center;
+}
+
+.container_client {
+  top: 100px;
+  padding: 25px 0;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 80px;
+  width: 45%;
+  height: 50%;
+  border-radius: 1%;
+  font-family: 'Century Gothic';
+  text-align: center;
+}
+
+.container_client input {
+  border: 2px solid rgb(0, 107, 195);
+  width: 35%;
+  height: 20px;
+  margin-bottom: 35px;
+  font-size: 120%;
+  font-family: 'Century Gothic';
+}
+
+.container_client select {
+  border: 2px solid rgb(0, 107, 195);
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+  font-size: 120%;
+  font-family: 'Century Gothic';
+}
+
+#btn_inscription_client {
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 130%;
+  position: absolute;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#btn_inscription_client:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+/** Nouvelle Location **/
+
+#Select_id_client{
+  width: auto;
+  height: 50px;
+  font-size: 120%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 310px;
+  border: 3px solid rgb(0, 107, 195);
+  font-family: 'Century Gothic';
+}
+
+.container_option_location2 {
+  top: 417px ;
+  padding: 25px 0;
+  text-align: center;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin-top: 20px;
+  width: 70%;
+  height: auto;
+  border-radius: 2%;
+  font-family: 'Century Gothic';
+}
+
+.container_option_location2 p {
+  color: black;
+  font-size: 135%;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container_option_location2 label{
+  position: relative;
+  text-align: center;
+  font-size: 110%;
+  margin-left: 5%;
+  margin-right: 5%;
+  left: -25px;
+}
+
+/******************************************** MaJ *******************************************/
+
+.MaJ{
+  top: 1000px;
+  left: 30px;
+  padding: 0px 0;
+  background-color: rgb(255,255,255);
+  position: absolute;
+  width: 90%;
+  height: 38%;
+  border-radius: 0;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1%;
+}
+
+.MaJ select {
+  border: 2px solid rgb(0, 107, 195);
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+  font-size: 110%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Century Gothic';
+}
+
+#btn_maj_compteur{
+  width: 350px;
+  height: auto;
+  position: absolute;
+  border: 2px solid rgb(0, 107, 195);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 120%;
+  font-family: 'Century Gothic';
+  top: 135px;
+  text-align: center;
+}
+
+#maj_vehicule{
+  width: auto;
+  height: auto;
+  background-color:rgb(29, 188, 212);
+  border-width: 2px;
+  border-color: rgb(0, 107, 195);
+  font-size: 130%;
+  position: absolute;
+  border-radius: 6px;
+  font-family: 'Century Gothic';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 190px;
+}
+
+#maj_vehicule:hover{
+  background-color: rgb(0, 107, 195);
+  cursor: pointer;
+}
+
+#texte_maj_vehicule{
+  color: black;
+  text-align: center;
+  font-family: 'Century Gothic';
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+}
