@@ -1,14 +1,53 @@
+
 # Locauto
-réalisation d'un site de location de voitures
-Page 1 : Accueil avec les informations a remplir pour la location de véhicule. 
-Page 2 : Ouverture du menu déroulant. 
-Page 3 : Connexion de l’utilisateur non obligatoire pour visiter le site. 
-Page 4 : Inscription du client et enregistrement dans la base de données si pas de compte. 
-Page 5 : Ouverture de la page quand on clique sur « faire louer mon véhicule » dans le menu déroulant dans l’accueil. Impossible de confirmer la mise en location si le client n’est pas connecté. 
-Page 6 : Ouverture de la page quand on clique sur « carte de nos garages » dans le menu déroulant dans l’accueil. 
-Page 7 : Ouverture de la page quand on clique sur « liste de nos véhicules » dans le menu déroulant dans l’accueil. Une barre de recherche est disponible. 
-Page 8 : Ouverture de cette page quand on clique sur un véhicule de la page précédente. 
-Page 9 : Ouverture de la page quand on clique sur « nous contacter » dans le menu déroulant dans l’accueil. 
-Page 10 : Ouverture de cette page quand on a rempli toutes les informations sur le véhicule que l’on souhaite louer dans l’accueil et qu’on clique sur « voir les véhicules ». Les véhicules qui apparaissent le font en fonction des informations rempli par le client. 
-Page 11 : Ouverture de cette page quand on clique sur un véhicule de la page précédente. 
-Page 12 : Ouverture quand on clique sur « effectuer cette location » sur la page précédente. Le prix dépend du véhicule et de la durée de location.
+**Locauto** est un site de location de voitures conçu pour offrir une expérience utilisateur intuitive et efficace. Le site est structuré en plusieurs pages pour faciliter la navigation et l'utilisation.
+
+## Fonctionnalités
+Le site comporte les pages suivantes, chacune avec ses fonctionnalités spécifiques :
+
+### Page 1 : Accueil
+- Formulaire pour remplir les informations nécessaires à la location d'un véhicule.
+
+### Page 2 : Menu Déroulant
+- Accès au menu déroulant du site.
+
+### Page 3 : Connexion
+- Connexion utilisateur non obligatoire pour la navigation sur le site.
+
+### Page 4 : Inscription
+- Inscription des nouveaux clients et enregistrement dans la base de données.
+
+### Page 5 : Location de Véhicule Personnel
+- Fonctionnalité pour "faire louer mon véhicule". Connexion requise pour confirmer la mise en location.
+
+### Page 6 : Carte des Garages
+- Affichage de la "carte de nos garages".
+
+### Page 7 : Liste des Véhicules
+- Liste complète des véhicules avec une barre de recherche intégrée.
+
+### Page 8 : Détails du Véhicule
+- Détails spécifiques sur le véhicule sélectionné.
+
+### Page 9 : Nous Contacter
+- Page de contact pour l'assistance ou les requêtes.
+
+### Page 10 : Sélection du Véhicule
+- Affichage des véhicules disponibles basé sur les informations fournies par le client.
+
+### Page 11 : Confirmation du Véhicule
+- Confirmation de la sélection du véhicule.
+
+### Page 12 : Finalisation de la Location
+- Finalisation du processus de location avec affichage du prix, qui dépend du véhicule et de la durée de location.
+
+## Contribution
+Les contributions à ce projet sont les bienvenues. Pour contribuer, veuillez suivre les étapes suivantes :
+1. Forkez le dépôt.
+2. Créez votre branche de fonctionnalités (`git checkout -b nom-de-votre-branche`).
+3. Commitez vos changements (`git commit -m 'Add some AmazingFeature'`).
+4. Poussez vers la branche (`git push origin nom-de-votre-branche`).
+5. Ouvrez une Pull Request.
+
+## Contact
+Pour plus d'informations, veuillez contacter Yanis GÂCHOT à gachot.yanis@gmail.com.
